@@ -1,0 +1,3 @@
+生成一个Gradio应用，第一行是下拉框，用户可以选择“GPT-4o”、“GPT-4o-min”、“GPT-4”等大模型。第二行是一个textare，用户可以填写System prompt文本。第三行是textare，用户可以填写User prompt。最后提供一个“提交”按钮。
+
+用户点击提交按钮，会调用一个Python函数，这个函数会初始化OpenAI Python客户端进行大模型调用。调用完成后，将结果返回给前端，前端展示在页面上。

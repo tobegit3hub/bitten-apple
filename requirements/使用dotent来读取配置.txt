@@ -1,0 +1,1 @@
+使用dotnet库，读取本地的配置文件，获取openai_base_url和openai_api_key两个配置。

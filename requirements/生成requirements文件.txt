@@ -1,0 +1,1 @@
+根据参考代码生成一个表示Python项目依赖的requirements.txt文件。
