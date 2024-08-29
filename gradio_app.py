@@ -33,7 +33,8 @@ def call_openai_model(model, system_prompt, user_prompt):
     return completion.choices[0].message.content
 
 model_list = [
-    'gpt-4o', 'gpt-4o-mini', 'gpt-4', 'gpt-3.5-turbo-1106', 'gpt-4-1106-preview'
+    'gpt-4o', 'gpt-4o-mini', 'gpt-4', 'gpt-4-turbo', 'gpt-3.5-turbo-1106', 'gpt-4-1106-preview',
+    'claude-3-opus-20240229', 'claude-3-sonnet-20240229', 'claude-3-haiku-20240307', 'claude-3-5-sonnet-20240620'
 ]
 
 # Create Gradio interface
