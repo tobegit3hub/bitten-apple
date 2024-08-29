@@ -20,3 +20,5 @@ Start the gradio server.
 ```
 python ./gradio_app.py
 ```
+
+Open <http://localhost:7860/> in your browser.
