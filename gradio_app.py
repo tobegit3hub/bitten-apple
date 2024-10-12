@@ -1,10 +1,10 @@
 import os
 import gradio as gr
 from openai import OpenAI
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 # Load environment variables from .env file
-load_dotenv()
+#load_dotenv()
 
 # Retrieve configuration values
 openai_base_url = os.getenv('OPENAI_BASE_URL')
@@ -33,15 +33,19 @@ def call_openai_model(model, system_prompt, user_prompt):
     return completion.choices[0].message.content
 
 model_list = [
-    'gpt-4o', 'gpt-4o-mini', 'gpt-4', 'gpt-4-turbo', 'gpt-3.5-turbo-1106', 'gpt-4-1106-preview',
-    'claude-3-opus-20240229', 'claude-3-sonnet-20240229', 'claude-3-haiku-20240307', 'claude-3-5-sonnet-20240620'
+    'o1-preview', 'o1-mini',
+    'gpt-4o', 'gpt-4o-mini', 
+    'gpt-4', 'gpt-4-turbo', 
+    'claude-3-opus-20240229', 'claude-3-haiku-20240307', 'claude-3-5-sonnet-20240620'
 ]
+
+
 
 # Create Gradio interface
 iface = gr.Interface(
     fn=call_openai_model,
     inputs=[
-        gr.components.Dropdown(label='Model', choices=model_list, value='gpt-4o'),
+        gr.components.Dropdown(label='Model', choices=model_list, value='o1-mini'),
         gr.components.Textbox(lines=4, label='System Prompt'),
         gr.components.Textbox(lines=4, label='User Prompt')
     ],
